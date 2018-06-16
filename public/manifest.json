@@ -1,0 +1,30 @@
+{
+  "short_name": "Lift Tracker",
+  "name": "Lift Tracker | A PWA by Jan Timpe",
+  "icons": [
+    {
+      "src": "lift@0.12x.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "lift@0.25x.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "lift@0.5x.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "lift.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

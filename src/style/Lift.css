@@ -1,0 +1,39 @@
+.lift {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  margin: 0px 4px;
+  border-bottom: 4px solid #ddd;
+}
+
+.lift .name, .lift .max-weight {
+  padding: 12px;
+  font-size: 18pt;
+  display: inline-block;
+}
+
+.lift:hover {
+  cursor: pointer;
+}
+
+.max-weight {
+  background: #66638B;
+  float: right;
+  text-align: right;
+  color: #fff;
+  font-family: 'Menlo', monospace;
+}
+
+.expanded {
+  background: #ddd;
+}
+
+.expanded .result {
+  padding: 8px;
+  font-size: 12pt;
+  border-bottom: 2px solid #aaa;
+}
+
+.expanded label {
+  color: #000;
+}
