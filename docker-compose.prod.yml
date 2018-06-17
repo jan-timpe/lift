@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/sites-enabled.prod.conf:/etc/nginx/conf.d/sites-enabled.conf
+      - ./build:/var/www/html
+    depends_on:
+      - react
+
+  react:
+    command: yarn build
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
