@@ -9,6 +9,7 @@ services:
     volumes:
       - ./nginx/sites-enabled.prod.conf:/etc/nginx/sites-enabled/default
       - ./build:/var/www/html
+      - /etc/letsencrypt/copy/lift.jantimpe.com:/etc/letsencrypt/lift.jantimpe.com
     depends_on:
       - react
 
