@@ -4,10 +4,10 @@ services:
   nginx:
     image: nginx
     ports:
-      - 80:80
-      - 443:443
+      - 80:8080
+      - 443:8443
     volumes:
-      - ./nginx/sites-enabled.prod.conf:/etc/nginx/conf.d/sites-enabled.conf
+      - ./nginx/sites-enabled.prod.conf:/etc/nginx/sites-enabled/default
       - ./build:/var/www/html
     depends_on:
       - react
