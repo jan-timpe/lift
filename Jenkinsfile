@@ -16,6 +16,11 @@ pipeline {
                 sh 'yarn install' 
             }
         }
+        stage('Test') {
+            steps {
+                sh 'yarn test'
+            }
+        }
         stage('Deploy') {
             steps {
                 sh './deploy.sh'
