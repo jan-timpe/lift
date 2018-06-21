@@ -16,5 +16,10 @@ pipeline {
                 sh 'yarn install' 
             }
         }
+        stage('Deploy') {
+            steps {
+                sh './deploy.sh'
+            }
+        }
     }
 }
