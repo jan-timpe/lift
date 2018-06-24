@@ -8,7 +8,6 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'apk update && apk add openssh-client'
                 sh 'npm install -g yarn'
             }
         }
