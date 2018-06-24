@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
+                sh 'apt-get update && apt-get install -y openssh-server'
                 sh 'npm install -g yarn'
             }
         }
