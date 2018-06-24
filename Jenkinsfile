@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'apt-get update && apt-get install -y openssh-server'
+                sh 'apk add openssh-client'
                 sh 'npm install -g yarn'
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './deploy.sh'
+                sh './deploy'
             }
         }
     }
