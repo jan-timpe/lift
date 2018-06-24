@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './deploy'
+                sh 'ssh root@lift.jantimpe.com "cd ~/lift.jantimpe.com && git pull && ./deploy"'
             }
         }
     }
