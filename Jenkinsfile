@@ -23,7 +23,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            script {
+            steps {
                 sshagent(credentials: ['eff3f854-c883-4628-9752-d02a9aaddec1']) {
                     sh 'ssh root@lift.jantimpe.com "cd ~/lift.jantimpe.com && git pull && ./deploy"'
                 }
