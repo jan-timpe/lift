@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import liftResult from './liftResult'
-import lift from './lift'
+import liftResults from './liftResult'
+import lifts from './lift'
 
 export default combineReducers({
-  liftResult,
-  lift
+  liftResults,
+  lifts
 })

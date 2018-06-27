@@ -2,31 +2,45 @@ import React, { Component } from 'react';
 import './App.css';
 import Lift from './components/Lift';
 import update from 'react-addons-update';
+import { connect } from "react-redux";
+import { addLift } from './actions'
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addLift: args => dispatch(addLift(args))
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    lifts: state.lifts
+  }
+}
 
 class App extends Component {
 
   constructor(props) {
     super(props)
-  
-    let accountCode = localStorage.getItem('account_code')
-    let liftsJson = localStorage.getItem('lifts')
 
     this.state = {
-      accountCode: accountCode ? accountCode : null,
-      lifts: liftsJson ? JSON.parse(liftsJson): [],
-      lift_name: null
+      lifts: props.lifts,
+      lift_name: ''
     }
+  }
+
+  componentWillReceiveProps(props) {
+    this.setState({
+      lifts: props.lifts
+    })
   }
 
 
   createLift() {
-    this.state.lifts.push({
-      name: this.state.lift_name,
-      history: [],
-      max: null
+    this.props.addLift({
+      name: this.state.lift_name
     })
     this.setState({ lift_name: '' })
-    localStorage.setItem('lifts', JSON.stringify(this.state.lifts))
+    // localStorage.setItem('lifts', JSON.stringify(this.state.lifts))
   }
 
   addLiftResult(liftIndex, weight) {
@@ -102,4 +116,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);

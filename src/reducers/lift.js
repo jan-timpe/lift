@@ -1,6 +1,6 @@
 import { ADD_LIFT } from '../actions'
 
-const lift = (state = [], action) => {
+const lifts = (state = [], action) => {
   switch(action.type) {
     case ADD_LIFT:
       return [
@@ -15,4 +15,4 @@ const lift = (state = [], action) => {
       return state
   }
 }
-export default lift
+export default lifts

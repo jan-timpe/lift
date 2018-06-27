@@ -1,6 +1,6 @@
 import { ADD_LIFT_RESULT } from '../actions'
 
-const liftResult = (state = [], action) => {
+const liftResults = (state = [], action) => {
   switch(action.type) {
     case ADD_LIFT_RESULT:
       return [
@@ -16,4 +16,4 @@ const liftResult = (state = [], action) => {
       return state
   }
 }
-export default liftResult
+export default liftResults
