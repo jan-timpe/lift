@@ -1,40 +1,44 @@
-import React, { Component } from 'react';
-import '../style/Lift.css';
+import React, { Component } from 'react'
+import '../style/Lift.css'
+import LiftResultList from './LiftResultList'
+import LiftResultForm from './LiftResultForm'
+import { connect } from 'react-redux'
+import { addLiftResult } from '../actions'
 
-export default class Lift extends Component {
+
+const mapStateToProps = (state, ownProps) => ({
+  results: state.liftResults.filter((result) => (result.liftId == ownProps.lift.id))
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  addLiftResult: args => dispatch(addLiftResult(args))
+})
+
+
+class Lift extends Component {
 
   constructor(props) {
     super(props)
 
     this.state = {
-      name: props.lift.name,
-      max: props.lift.max,
-      history: props.lift.history,
-      addResultCallback: props.addResultCallback,
-      liftIndex: props.liftIndex,
-      weight: null,
+      weight: '',
+      expanded: false,
     }
   }
 
-  componentWillReceiveProps(props) {
-    this.setState({
-      name: props.lift.name,
-      max: props.lift.max,
-      history: props.lift.history,
-      addResultCallback: props.addResultCallback,
-      liftIndex: props.liftIndex
-    })
-
-    console.log(this.state)
+  getMaxWeight() {
+    var max = null
+    let results = this.props.results;
+    for(var i = 0; i < results.length; i++) {
+      if(results[i].weight > max) {
+        max = results[i].weight
+      }
+    }
+    return max
   }
 
   toggleExpanded() {
     this.setState({ expanded: !this.state.expanded })
-  }
-
-  addLiftResult() {
-    this.state.addResultCallback(this.state.liftIndex, this.state.weight)
-    this.setState({ weight: '' })
   }
 
   render() {
@@ -43,45 +47,22 @@ export default class Lift extends Component {
     if(this.state.expanded) {
       expandedCell = (
         <div className="expanded">
-
-          <form onSubmit={ (event) => {
-            event.preventDefault()
-            this.addLiftResult()
-          }}>
-
-            <div className="input-wrapper">
-              <label htmlFor="weight">Add result:</label>
-              <input type="number" name="weight" id="weight" value={ this.state.weight } onChange={ (evt) => {
-                this.setState({ weight: evt.target.value })
-              }}/>
-            </div>
-            <div className="input-wrapper">
-              <input type="submit" value="Add" className="button"/>
-            </div>
-          </form>
-
-
-          { this.state.history.map( (result, i) => {
-            return (
-              <div className="result" key={ i }>
-                { result.weight } on { result.date }
-              </div>
-            )
-          })}
+          <LiftResultForm addLiftResult={this.props.addLiftResult} liftId={this.props.lift.id} />
+          <LiftResultList results={this.props.results} />
         </div>
       )
     }
 
     return (
-      <div className="lift">
+      <div className="Lift">
         <div onClick={ () => {
           this.toggleExpanded()
         }}>
           <div className="name">
-            { this.state.name }
+            { this.props.lift.name }
           </div>
           <div className="max-weight">
-            { this.state.max ? this.state.max.weight : null }
+            { this.props.results.length > 0 ? this.getMaxWeight() : null }
           </div>
         </div>
 
@@ -92,5 +73,7 @@ export default class Lift extends Component {
   }
 
 
-
 }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Lift)

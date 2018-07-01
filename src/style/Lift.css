@@ -1,4 +1,4 @@
-.lift {
+.Lift {
   width: 100%;
   background: #fff;
   color: #000;
@@ -6,13 +6,13 @@
   border-bottom: 4px solid #ddd;
 }
 
-.lift .name, .lift .max-weight {
+.Lift .name, .Lift .max-weight {
   padding: 12px;
   font-size: 18pt;
   display: inline-block;
 }
 
-.lift:hover {
+.Lift:hover {
   cursor: pointer;
 }
 

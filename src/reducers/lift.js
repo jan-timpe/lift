@@ -8,7 +8,6 @@ const lifts = (state = [], action) => {
         {
           id: action.id,
           name: action.name,
-          history: action.history
         }
       ]
     default:
