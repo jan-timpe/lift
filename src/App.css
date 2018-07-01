@@ -42,37 +42,3 @@ h1 {
   color: #F9B0F4;
   font-family: 'Menlo', monospace;
 }
-
-input[type=text], input[type=number] {
-  display: block;
-  width: 120px;
-  padding: 8px;
-  -webkit-appearance: none;
-  background: #fff;
-  border: none;
-  font-size: 12pt;
-}
-
-label {
-  color: #fff;
-}
-
-.input-wrapper {
-  display: inline-block;
-  margin: 4px;
-}
-
-.button {
-  -webkit-appearance: none;
-  padding: 8px;
-  border: none;
-  background: #c0392b;
-  color: #fff;
-  font-size: 12pt;
-}
-
-.button:hover {
-  background: #e74c3c;
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-}

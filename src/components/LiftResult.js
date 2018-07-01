@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../style/LiftResult.css'
 
 
 export default class LiftResult extends Component {
