@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lift should render 1`] = `
+<div
+  className="Lift"
+>
+  <div
+    className="clickable"
+    onClick={[Function]}
+  >
+    <div
+      className="name"
+    >
+      Squat
+    </div>
+    <div
+      className="max-weight"
+    >
+      205
+    </div>
+  </div>
+</div>
+`;

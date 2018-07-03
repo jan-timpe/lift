@@ -1,8 +1,8 @@
-import configureStore from 'redux-mock-store';
-import { ADD_LIFT, addLift, ADD_LIFT_RESULT, addLiftResult } from '../../actions';
+import configureStore from 'redux-mock-store'
+import { ADD_LIFT, addLift, ADD_LIFT_RESULT, addLiftResult } from '../../actions'
 
-const mockStore = configureStore();
-const store = mockStore();
+const mockStore = configureStore()
+const store = mockStore()
 
 
 describe(`test redux actions`, () => {

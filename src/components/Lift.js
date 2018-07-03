@@ -55,7 +55,7 @@ class Lift extends Component {
 
     return (
       <div className="Lift">
-        <div onClick={ () => {
+        <div className="clickable" onClick={ () => {
           this.toggleExpanded()
         }}>
           <div className="name">
