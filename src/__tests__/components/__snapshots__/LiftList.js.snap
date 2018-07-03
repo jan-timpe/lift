@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiftList should render 1`] = `
+<div
+  className="LiftList"
+>
+  <Connect(Lift)
+    key="0"
+    lift={
+      Object {
+        "id": 0,
+        "name": "Squat",
+      }
+    }
+  />
+  <Connect(Lift)
+    key="1"
+    lift={
+      Object {
+        "id": 1,
+        "name": "Bench",
+      }
+    }
+  />
+</div>
+`;

@@ -13,4 +13,5 @@ export default class LiftList extends Component {
       </div>
     )
   }
+
 }
