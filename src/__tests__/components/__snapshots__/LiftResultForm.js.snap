@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiftResultForm should render 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="input-wrapper"
+  >
+    <label
+      htmlFor="weight"
+    >
+      Add result:
+    </label>
+    <input
+      onChange={[Function]}
+      placeholder="e.g., 215"
+      type="number"
+      value=""
+    />
+  </div>
+  <div
+    className="input-wrapper"
+  >
+    <input
+      className="button"
+      type="submit"
+      value="Add"
+    />
+  </div>
+</form>
+`;
