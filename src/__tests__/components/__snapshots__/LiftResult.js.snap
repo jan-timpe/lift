@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiftResult should render 1`] = `
+<div
+  className="LiftResult"
+>
+  <p>
+    200
+     on 
+    7/1/2018
+  </p>
+</div>
+`;
