@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiftResultList should render 1`] = `
+<div
+  className="LiftResultList"
+>
+  <LiftResult
+    key="0"
+    result={
+      Object {
+        "date": "7/1/2018",
+        "id": 0,
+        "liftId": 0,
+        "weight": 200,
+      }
+    }
+  />
+  <LiftResult
+    key="1"
+    result={
+      Object {
+        "date": "7/2/2018",
+        "id": 1,
+        "liftId": 0,
+        "weight": 300,
+      }
+    }
+  />
+</div>
+`;
