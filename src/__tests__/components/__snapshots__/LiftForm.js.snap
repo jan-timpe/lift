@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiftForm should render 1`] = `
+<div
+  class="LiftForm"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="input-wrapper"
+    >
+      <label
+        htmlFor="lift_name"
+      >
+        New lift:
+      </label>
+      <input
+        onChange={[Function]}
+        placeholder="e.g., Squat"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="input-wrapper"
+    >
+      <input
+        className="button"
+        type="submit"
+        value="Create"
+      />
+    </div>
+  </form>
+</div>
+`;
