@@ -8,7 +8,7 @@ services:
       - 80:8080
       - 443:8443
     volumes:
-      - ./nginx/sites-enabled.prod.conf:/etc/nginx/sites-enabled/default
+      - ./nginx/lift.jantimpe.com:/etc/nginx/sites-enabled/default
       - ./build:/var/www/html
       - /etc/letsencrypt/copy/lift.jantimpe.com:/etc/letsencrypt/lift.jantimpe.com
     depends_on:
