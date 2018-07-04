@@ -1,11 +1,13 @@
 {
   "name": "lift-tracker",
   "version": "0.1.0",
+  "homepage": "https://jan-timpe.github.io/lift",
   "private": true,
   "dependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
+    "gh-pages": "^1.2.0",
     "global": "^4.3.2",
     "react": "^16.4.0",
     "react-addons-update": "^15.6.2",
@@ -19,6 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   }
 }
