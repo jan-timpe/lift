@@ -9,8 +9,9 @@ script:
   - yarn build
 deploy:
   provider: pages
-  skip_cleanup: true
+  skip-cleanup: true
   github-token: $github_token
-  local_dir: build
+  local-dir: build
+  keep-history: true
   on:
     branch: master
