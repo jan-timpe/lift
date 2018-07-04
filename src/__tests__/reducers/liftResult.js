@@ -2,7 +2,7 @@ import reducer from '../../reducers/liftResult'
 import { ADD_LIFT_RESULT } from '../../actions'
 
 
-describe(`LiftListContainer`, () => {
+describe(`liftResult reducer`, () => {
 
   // initial state
   it(`should return empty initial state`, () => {
