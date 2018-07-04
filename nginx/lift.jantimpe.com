@@ -1,14 +1,3 @@
-# Cache expiration
-
-map $sent_http_content_type $expires {
-    default off;
-    text/html epoch;
-    text/css max;
-    application/javascript max;
-    ~image/ max;
-}
-
-##
 
 # Default server on port 80 redirects to https
 
@@ -77,7 +66,7 @@ server {
     ##
     # Caching and compression
 
-    expires $expires;
+    expires max;
 
     gzip_disable "msie6";
     gzip_vary on;
