@@ -56,9 +56,9 @@ http {
         ssl_stapling_verify on;
         resolver 8.8.8.8 8.8.4.4;
 
-        ssl_certificate /etc/letsencrypt/live/lift.jantimpe.com/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/lift.jantimpe.com/privkey.pem;
-        ssl_trusted_certificate /etc/letsencrypt/live/jantimpe.com/chain.pem;
+        ssl_certificate /etc/letsencrypt/lift.jantimpe.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/lift.jantimpe.com/privkey.pem;
+        ssl_trusted_certificate /etc/letsencrypt/jantimpe.com/chain.pem;
 
         access_log /dev/stdout;
         error_log /dev/stderr info;
