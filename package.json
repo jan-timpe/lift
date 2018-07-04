@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --repo git@github.com:jan-timpe/lift.git",
     "eject": "react-scripts eject"
   }
 }
