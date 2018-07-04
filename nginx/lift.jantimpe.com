@@ -1,6 +1,8 @@
-# Default server on port 80 redirects to https
 
 http {
+
+    # Default server on port 80 redirects to https
+
     server {
 
         listen 8080;
@@ -14,12 +16,10 @@ http {
             rewrite ^ https://$host$request_uri? permanent;
         }
     }
-}
 
 
-# Application served on port 443 (https)
+    # Application served on port 443 (https)
 
-http {
     server {
 
         # default server settings
