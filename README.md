@@ -3,6 +3,8 @@
 A simple progressive web app for tracking lifts and maxes. [https://jan-timpe.github.io/lift/](https://jan-timpe.github.io/lift/)
 
 
+
+
 ## Run
 
 ```bash
