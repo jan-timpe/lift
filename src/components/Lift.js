@@ -7,7 +7,7 @@ import { addLiftResult } from '../actions'
 
 
 const mapStateToProps = (state, ownProps) => ({
-  results: state.liftResults.filter((result) => (result.liftId == ownProps.lift.id))
+  results: state.liftResults.filter((result) => (result.liftId === ownProps.lift.id))
 })
 
 const mapDispatchToProps = (dispatch) => ({

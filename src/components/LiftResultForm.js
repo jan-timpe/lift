@@ -18,7 +18,7 @@ export default class LiftResultForm extends Component {
         let date = new Date()
         this.props.addLiftResult({
           liftId: this.props.liftId,
-          weight: parseInt(this.state.weight),
+          weight: parseInt(this.state.weight, 10),
           date: date.toLocaleDateString('en-US')
         })
         this.setState({ weight: '' })

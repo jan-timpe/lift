@@ -2,7 +2,7 @@ import { ADD_LIFT_RESULT } from '../actions'
 
 const liftResults = (state = [], action) => {
 
-  if(state.length == 0) {
+  if(state.length === 0) {
     let savedData = localStorage.getItem('results')
     if(savedData) {
       state = JSON.parse(savedData)
