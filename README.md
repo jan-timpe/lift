@@ -12,6 +12,8 @@ yarn
 yarn start
 ```
 
+View on `localhost:3000`
+
 ## Test
 
 ```bash
