@@ -4,14 +4,6 @@ import LiftListContainer from './components/LiftListContainer'
 
 export default class App extends Component {
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      lift_name: ''
-    }
-  }
-
   render() {
       return (
         <div className="App">
