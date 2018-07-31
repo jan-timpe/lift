@@ -1,7 +1,7 @@
 {
   "name": "lift-tracker",
   "version": "0.1.0",
-  "homepage": "https://jan-timpe.github.io/lift",
+  "homepage": "https://lift.jantimpe.com",
   "private": true,
   "dependencies": {
     "enzyme": "^3.3.0",
